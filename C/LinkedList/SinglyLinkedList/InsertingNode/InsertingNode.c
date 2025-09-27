@@ -117,6 +117,33 @@ void DisplayList()
     printf("NULL\n");
 }
 
+
+void insertAtPosition(struct Node **head, int data, int pos){
+    struct Node *temp , *newNode;
+    newNode = (struct Node *)malloc(sizeof(struct Node));
+    newNode->Data = data;
+    newNode->Next = NULL;
+
+    if(pos == 1){
+        newNode->Next = *head;
+        *head = newNode;
+        return;
+    }
+    for(int i = 1 ; i < pos -1 && temp != NULL ; i++){
+        temp = temp->Next;
+    }
+    temp = *head;
+    if(temp == NULL){
+        printf("Invalid Size");
+        free(newNode);
+        return;
+    }
+    newNode->Next = temp->Next;
+    temp->Next = newNode;
+
+}
+
+
 int main()
 {
     int Choice;
@@ -146,3 +173,4 @@ int main()
     }
     return 0;
 }
+
