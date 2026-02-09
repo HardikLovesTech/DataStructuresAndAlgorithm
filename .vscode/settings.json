@@ -5,6 +5,9 @@
         "string_view": "c",
         "span": "c",
         "vector": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "stack": "c",
+        "queue": "c",
+        "InfixToPostfix.C": "cpp"
     }
 }
